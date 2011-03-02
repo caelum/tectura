@@ -1,7 +1,7 @@
 <% content_for :right do %>
 
   <h5><%=  I18n.t 'txt.views_users.avatars_title', :default => 'Avatars' %></h5>
-  <p><%= I18n.t 'txt.views_users.gravatar_notice', :default => 'To have your very own avatar displayed on this forum visit {{gravatar}} and sign up for a free gravatar.', :gravatar => '<a href="http://www.gravatar.com/" title="Gravatar - Globally Recognized Avatars">Gravatar</a>' %></p>
+  <p><%= I18n.t 'txt.views_users.gravatar_notice', :default => 'To have your very own avatar displayed on this forum visit %{gravatar} and sign up for a free gravatar.', :gravatar => '<a href="http://www.gravatar.com/" title="Gravatar - Globally Recognized Avatars">Gravatar</a>' %></p>
 
   <% if current_user.admin? %>
     <% form_for @user, :url => make_admin_user_path(@user) do |f| %>
@@ -20,7 +20,7 @@
 
 <h1><%= I18n.t 'txt.views_users.settings', :default => 'Settings' %></h1>
 
-<p class="subtitle"><%= I18n.t 'txt.views_users.for_user', :default => 'for {{user}}', :user => @user.display_name %>
+<p class="subtitle"><%= I18n.t 'txt.views_users.for_user', :default => 'for %{user}', :user => @user.display_name %>
 	<% if @user.login!=@user.display_name %>
 	(<%= @user.login %>)
 	<% end %>

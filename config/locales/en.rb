@@ -23,16 +23,16 @@
     :datetime => {
       :distance_in_words => {
         :half_a_minute       => 'half a minute',
-        :less_than_x_seconds => {:zero => 'less than 1 second', :one => '1 second', :other => '{{count}} seconds'},
-        :x_seconds           => {:one => '1 second', :other => '{{count}} seconds'},
-        :less_than_x_minutes => {:zero => 'less than a minute', :one => '1 minute', :other => '{{count}} minutes'},
-        :x_minutes           => {:one => "1 minute", :other => "{{count}} minutes"},
-        :about_x_hours       => {:one => 'about 1 hour', :other => '{{count}} hours'},
-        :x_days              => {:one => '1 day', :other => '{{count}} days'},
-        :about_x_months      => {:one => 'about 1 month', :other => '{{count}} months'},
-        :x_months            => {:one => '1 month', :other => '{{count}} months'},
-        :about_x_years       => {:one => 'about 1 year', :other => '{{count}} years'},
-        :over_x_years        => {:one => 'over 1 year', :other => '{{count}} years'}
+        :less_than_x_seconds => {:zero => 'less than 1 second', :one => '1 second', :other => '%{count} seconds'},
+        :x_seconds           => {:one => '1 second', :other => '%{count} seconds'},
+        :less_than_x_minutes => {:zero => 'less than a minute', :one => '1 minute', :other => '%{count} minutes'},
+        :x_minutes           => {:one => "1 minute", :other => "%{count} minutes"},
+        :about_x_hours       => {:one => 'about 1 hour', :other => '%{count} hours'},
+        :x_days              => {:one => '1 day', :other => '%{count} days'},
+        :about_x_months      => {:one => 'about 1 month', :other => '%{count} months'},
+        :x_months            => {:one => '1 month', :other => '%{count} months'},
+        :about_x_years       => {:one => 'about 1 year', :other => '%{count} years'},
+        :over_x_years        => {:one => 'over 1 year', :other => '%{count} years'}
       }
     },
  
@@ -55,7 +55,7 @@
     # Active Record
     :active_record => {
       :error => {
-        :header_message => ["Couldn't save this {{object_name}}: 1 error", "Couldn't save this {{object_name}}: {{count}} errors."],
+        :header_message => ["Couldn't save this %{object_name}: 1 error", "Couldn't save this %{object_name}: %{count} errors."],
         :message => "Please check the following fields:"
       }
     },
@@ -68,16 +68,16 @@
         :accepted  => "must be accepted",
         :empty => "must be given",
         :blank => "must be given",
-        :too_long => "is too long (no more than {{count}} characters)",
-        :too_short => "is too short (no less than {{count}} characters)",
-        :wrong_length => "is not the right length (must be {{count}} characters)",
+        :too_long => "is too long (no more than %{count} characters)",
+        :too_short => "is too short (no less than %{count} characters)",
+        :wrong_length => "is not the right length (must be %{count} characters)",
         :taken => "is not available",
         :not_a_number => "is not a number",
-        :greater_than => "must be greater than {{count}}",
-        :greater_than_or_equal_to => "must be greater than or equal to {{count}}",
-        :equal_to => "must be equal to {{count}}",
-        :less_than => "must be less than {{count}}",
-        :less_than_or_equal_to => "must be less than or equal to {{count}}",
+        :greater_than => "must be greater than %{count}",
+        :greater_than_or_equal_to => "must be greater than or equal to %{count}",
+        :equal_to => "must be equal to %{count}",
+        :less_than => "must be less than %{count}",
+        :less_than_or_equal_to => "must be less than or equal to %{count}",
         :odd => "must be odd",
         :even => "must be even"
       }
@@ -96,9 +96,9 @@
       },
       :about => {
         :title => "About this demo app",
-        :author => "This demo app was written by {{mail_1}}.",
-        :feedback => "If you have any feedback, please feel free to drop me a line. Also visit {{blog_href}} where I regularly blog about Rails and other stuff.",
-        :licence => "This demo app and all its contents are licensed under the {{licence_href}}. If you want to use it in ways prohibited by this license, please contact me and ask my permission."
+        :author => "This demo app was written by %{mail_1}.",
+        :feedback => "If you have any feedback, please feel free to drop me a line. Also visit %{blog_href} where I regularly blog about Rails and other stuff.",
+        :licence => "This demo app and all its contents are licensed under the %{licence_href}. If you want to use it in ways prohibited by this license, please contact me and ask my permission."
       },
       :active_record => {
         :too_lazy => "No examples here since I'm too lazy to think of attributes to show <strong>all</strong> custom error messages. ;-)",
@@ -113,17 +113,17 @@
       },
       :index => {
         :others => "others",
-        :introduction => "Lately, a lot of work has been done by {{sven_blog}} and {{sven_github}} to facilitate future internationalization and localization of Rails.",
+        :introduction => "Lately, a lot of work has been done by %{sven_blog} and %{sven_github} to facilitate future internationalization and localization of Rails.",
         :story_so_far => "This demo app tries to show you how you can use the features that have been implemented so far to localize big parts of your Rails application."
       },
       :number_helper => {
-        :note_one => "Note: <code>number_to_phone</code> hasn't been localized yet and probably never will be - at least not in core. Look out for new internationalization/localization plugins like a new version of {{globalize}} as they will probably support stuff like that.",
+        :note_one => "Note: <code>number_to_phone</code> hasn't been localized yet and probably never will be - at least not in core. Look out for new internationalization/localization plugins like a new version of %{globalize} as they will probably support stuff like that.",
         :note_two => "Another note: <code>number_to_currency</code>, <code>number_to_percentage</code> and <code>number_to_human_size</code> all use <code>number_with_precision</code> internally and <code>number_with_precision</code> uses <code>number_with_delimiter</code> internally."
       },
       :setup => {
         :freezing_edge_and_adding => "Freezing Edge and installing the localized_dates plugin",
         :you_need_to_be_on_edge => "You need to be on Edge Rails in order to use the Rails i18n features:",
-        :date_time_formats => "For date and time formats, you also need to install the {{localized_dates_link}}:",
+        :date_time_formats => "For date and time formats, you also need to install the %{localized_dates_link}:",
         :config_locale => "Configuring the locale",
         :best_place => "The best place to put your locale configuration, in my opinion, is <code>config/locales</code>. The localized_dates plugin will copy two locales, en-US and de-AT, in this directory. You can extend or modify them and also create new locales.",
         :locale => "Here's the demo locale that was used for this demo application:",

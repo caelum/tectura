@@ -16,6 +16,8 @@ Then, execute the following commands on the project root:
 
 <tt>rake gems:install</tt>
 
+<tt>gem install highline ruby-debug mail mysql</tt>
+
 <tt>rake app:bootstrap</tt>
 
 You may be prompted to install a few extra gems.
