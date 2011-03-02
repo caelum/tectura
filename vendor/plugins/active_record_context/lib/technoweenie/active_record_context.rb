@@ -38,7 +38,7 @@ module Technoweenie
       end
       
       def find_every_with_context(options)
-        returning find_every_without_context(options) do |records|
+        find_every_without_context(options).tap do |records|
           store_in_context records
         end
       end
