@@ -20,3 +20,7 @@ group :development, :test do
   gem 'highline'
   gem 'ruby-debug'
 end
+
+group :test do
+  gem 'sqlite3'
+end
