@@ -78,10 +78,12 @@ legend { color: #000000; }
   height: 90px;
   text-indent: -10000px;
   width: 320px;
+  margin-top: 60px;
 }
 #header .search_box {
   clear: right;
   float: right;
+  margin-top: 5px;
 }
 #header .search_box input.gsc-input {
   border-radius: 4px;
@@ -105,7 +107,7 @@ legend { color: #000000; }
   border: 0px;
   height: 24px;
   margin: 5px 0px 5px 0px;
-  padding: 0px;
+  padding: 0px 3px;
 }
 #header #nav-tags {
   background: #191919;
