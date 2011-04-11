@@ -7,7 +7,7 @@ module ApplicationHelper
   #end
   
   def random_banner
-    BANNERS.shuffle.first
+    BANNERS[rand(BANNERS.size)]
   end
 
   def feed_icon_tag(title, url)
