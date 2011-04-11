@@ -1,10 +1,14 @@
 require 'md5'
-
+require File.expand_path(File.dirname(__FILE__) + "/../../config/banners")
 
 module ApplicationHelper
   #def forum_posts_path(forum, options = {})
   #	super(Forum.first, options)
   #end
+  
+  def random_banner
+    BANNERS.shuffle.first
+  end
 
   def feed_icon_tag(title, url)
     (@feed_icons ||= []) << { :url => url, :title => title }
