@@ -53,6 +53,7 @@ gem install treetop -v=1.4.8 --no-ri --no-rdoc
 cp config/database.yml.example config/database.yml
 cp config/email.yml.example config/email.yml
 cp config/recaptcha.rb.example config/recaptcha.rb
+cp config/banners.yml.example config/banners.yml
 
 rake db:migrate
 
