@@ -54,6 +54,7 @@ cp config/database.yml.example config/database.yml
 cp config/email.yml.example config/email.yml
 cp config/recaptcha.rb.example config/recaptcha.rb
 
+rake db:create:test
 rake db:migrate
 
 rake spec
