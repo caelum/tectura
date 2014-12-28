@@ -29,35 +29,35 @@
       less_than_x_seconds:
         zero: 'weniger als 1 Sekunde'
         one: '1 Sekunde'
-        other: '{{count}} Sekunden'
+        other: '%{count} Sekunden'
       x_seconds:
         one: '1 Sekunde'
-        other: '{{count}} Sekunden'
+        other: '%{count} Sekunden'
       less_than_x_minutes:
         zero: 'weniger als 1 Minute'
         one: 'eine Minute'
-        other: '{{count}} Minuten'
+        other: '%{count} Minuten'
       x_minutes:
         one: '1 Minute'
-        other: '{{count}} Minuten'
+        other: '%{count} Minuten'
       about_x_hours:
         one: 'etwa 1 Stunde'
-        other: '{{count}} Stunden'
+        other: '%{count} Stunden'
       x_days:
         one: '1 Tag'
-        other: '{{count}} Tagen'
+        other: '%{count} Tagen'
       about_x_months:
         one: 'etwa 1 Monat'
-        other: '{{count}} Monate'
+        other: '%{count} Monate'
       x_months:
         one: '1 Monat'
-        other: '{{count}} Monate'
+        other: '%{count} Monate'
       about_x_years:
         one: 'etwa 1 Jahr'
-        other: '{{count}} Jahre'
+        other: '%{count} Jahre'
       over_x_years:
         one: 'mehr als 1 Jahr'
-        other: '{{count}} Jahre'
+        other: '%{count} Jahre'
       
   number:
     format:
@@ -71,7 +71,7 @@
         
   active_record:
     error:
-      header_message: ["Konnte das {{object_name}} Objekt nicht speichern: 1 Fehler.", "Konnte das {{object_name}} Objekt nicht speichern: {{count}} Fehler."]
+      header_message: ["Konnte das %{object_name} Objekt nicht speichern: 1 Fehler.", "Konnte das %{object_name} Objekt nicht speichern: %{count} Fehler."]
       message: "Bitte überprüfen Sie die folgenden Felder:"
     error_messages:
       inclusion: "ist kein gültiger Wert"
@@ -81,16 +81,16 @@
       accepted: "muss akzeptiert werden"
       empty: "muss ausgefüllt werden"
       blank: "muss ausgefüllt werden"
-      too_long: "ist zu lang (nicht mehr als {{count}} Zeichen)"
-      too_short: "ist zu kurz (nicht weniger als {{count}} Zeichen)"
-      wrong_length: "hat die falsche Länge (muss genau {{count}} Zeichen haben)"
+      too_long: "ist zu lang (nicht mehr als %{count} Zeichen)"
+      too_short: "ist zu kurz (nicht weniger als %{count} Zeichen)"
+      wrong_length: "hat die falsche Länge (muss genau %{count} Zeichen haben)"
       taken: "ist bereits vergeben"
       not_a_number: "ist keine Zahl"
-      greater_than: "muss größer als {{count}} sein"
-      greater_than_or_equal_to: "muss größer oder gleich {{count}} sein"
-      equal_to: "muss genau {{count}} sein"
-      less_than: "muss kleiner als {{count}} sein"
-      less_than_or_equal_to: "muss kleiner oder gleich {{count}} sein"
+      greater_than: "muss größer als %{count} sein"
+      greater_than_or_equal_to: "muss größer oder gleich %{count} sein"
+      equal_to: "muss genau %{count} sein"
+      less_than: "muss kleiner als %{count} sein"
+      less_than_or_equal_to: "muss kleiner oder gleich %{count} sein"
       odd: "muss ungerade sein"
       even: "muss gerade sein"
 
@@ -129,7 +129,7 @@
     user_is_administrator: Administrator
     user_is_moderator: Moderator
 
-    user_since: Benutzer seit {{date}}
+    user_since: Benutzer seit %{date}
     monitored: monitored
     locked: gesperrt
     locked_topic: Dieses Thema ist gesperrt.
@@ -139,15 +139,15 @@
     recent_posts: Neue Beiträge
     no_recent_activity: Keine neuen Aktivitäten
     show_recent_posts: Neueste Themen anzeigen
-    search_results_for_searchterm: "Suchergebnis für &raquo;{{searchterm}}&laquo;"
+    search_results_for_searchterm: "Suchergebnis für &raquo;%{searchterm}&laquo;"
     goto_last_page: zur letzten Seite
 
     new_topic: Neues Thema
     post_topic: Thema starten
     reply_to_topic: Neuen Beitrag zu diesem Thema schreiben
 
-    by_user: "von {{user}}"
-    page_nr: "Seite {{nr}}"
+    by_user: "von %{user}"
+    page_nr: "Seite %{nr}"
 
     login: Login
     login_name: Login
@@ -180,7 +180,7 @@
 
       admin_and_moderation: Admin & Moderation
       remove_moderated_forum: Der Benutzer kann folgende Foren moderieren. Anklicken um dessen Moderation zu löschen.
-      remove_user_as_moderator: Benutzer als Moderator von &raquo;{{forum}}&laquo; entfernen?
+      remove_user_as_moderator: Benutzer als Moderator von &raquo;%{forum}&laquo; entfernen?
       add_as_moderator: Als Moderator hinzufügen
       user_is_an_administrator: User ist ein Administrator
       suspend_user_account: Benutzer sperren
@@ -192,44 +192,44 @@
     count_forums:
       zero: "kein Forum"
       one: "1 Forum"
-      other: "{{num}} Foren"
+      other: "%{num} Foren"
 
     count_users:
       zero: "kein Benutzer"
       one: "1 Benutzer"
-      other: "{{num}} Benutzer"
+      other: "%{num} Benutzer"
 
     count_users_active:
       zero: "kein aktiver Benutzer"
       one: "1 aktiver Benutzer"
-      other: "{{num}} aktive Benutzer"
+      other: "%{num} aktive Benutzer"
 
     count_users_lurking:
       zero: "kein nur-lesender Benutzer"
       one: "1 nur-lesender Benutzer"
-      other: "{{num}} nur-lesende Benutzer"
+      other: "%{num} nur-lesende Benutzer"
 
     count_voices:
       zero: "kein Teilnehmer"
       one: "1 Teilnehmer"
-      other: "{{num}} Teilnehmer"
+      other: "%{num} Teilnehmer"
 
     count_topics:
       zero: "kein Thema"
       one: "1 Thema"
-      other: "{{num}} Themen"
+      other: "%{num} Themen"
 
     count_posts:
       zero: "kein Beitrag"
       one: "1 Beitrag"
-      other: "{{num}} Beiträge"
+      other: "%{num} Beiträge"
 
     count_posts_found:
       zero: "kein Beitrag gefunden"
       one: "1 Beitrag gefunden"
-      other: "{{count}} Beiträge gefunden"
+      other: "%{count} Beiträge gefunden"
 
-    post_age: "vor {{when}}"
+    post_age: "vor %{when}"
 
     views_sites:
       title: Seiten
@@ -251,9 +251,9 @@
       search_title: suchen
 
       avatars_title: Avatar
-      gravatar_notice: Damit Ihr eigener Avatar angezeigt wird, melden Sie sich bitte kostenlos bei {{gravatar}} an und hinterlegen Sie dort Ihren ganz persönlichen Avatar.
+      gravatar_notice: Damit Ihr eigener Avatar angezeigt wird, melden Sie sich bitte kostenlos bei %{gravatar} an und hinterlegen Sie dort Ihren ganz persönlichen Avatar.
       settings: Einstellungen
-      for_user: für Benutzer {{user}}
+      for_user: für Benutzer %{user}
       change_email_or_password: Email oder Passwort ändern
       update_profile: Profil aktualisieren
 

@@ -29,16 +29,16 @@
     :datetime => {
       :distance_in_words => {
         :half_a_minute       => 'half a minute',
-        :less_than_x_seconds => {:zero => 'less than 1 second', :one => '1 second', :other => '{{count}} seconds'},
-        :x_seconds           => {:one => '1 second', :other => '{{count}} seconds'},
-        :less_than_x_minutes => {:zero => 'less than a minute', :one => '1 minute', :other => '{{count}} minutes'},
-        :x_minutes           => {:one => "1 minute", :other => "{{count}} minutes"},
-        :about_x_hours       => {:one => 'about 1 hour', :other => '{{count}} hours'},
-        :x_days              => {:one => '1 day', :other => '{{count}} days'},
-        :about_x_months      => {:one => 'about 1 month', :other => '{{count}} months'},
-        :x_months            => {:one => '1 month', :other => '{{count}} months'},
-        :about_x_years       => {:one => 'about 1 year', :other => '{{count}} years'},
-        :over_x_years        => {:one => 'over 1 year', :other => '{{count}} years'}
+        :less_than_x_seconds => {:zero => 'less than 1 second', :one => '1 second', :other => '%{count} seconds'},
+        :x_seconds           => {:one => '1 second', :other => '%{count} seconds'},
+        :less_than_x_minutes => {:zero => 'less than a minute', :one => '1 minute', :other => '%{count} minutes'},
+        :x_minutes           => {:one => "1 minute", :other => "%{count} minutes"},
+        :about_x_hours       => {:one => 'about 1 hour', :other => '%{count} hours'},
+        :x_days              => {:one => '1 day', :other => '%{count} days'},
+        :about_x_months      => {:one => 'about 1 month', :other => '%{count} months'},
+        :x_months            => {:one => '1 month', :other => '%{count} months'},
+        :about_x_years       => {:one => 'about 1 year', :other => '%{count} years'},
+        :over_x_years        => {:one => 'over 1 year', :other => '%{count} years'}
       }
     },
 
@@ -86,9 +86,9 @@
       },
       :about => {
         :title => "About this demo app",
-        :author => "This demo app was written by {{mail_1}}.",
-        :feedback => "If you have any feedback, please feel free to drop me a line. Also visit {{blog_href}} where I regularly blog about Rails and other stuff.",
-        :licence => "This demo app and all its contents are licensed under the {{licence_href}}. If you want to use it in ways prohibited by this license, please contact me and ask my permission."
+        :author => "This demo app was written by %{mail_1}.",
+        :feedback => "If you have any feedback, please feel free to drop me a line. Also visit %{blog_href} where I regularly blog about Rails and other stuff.",
+        :licence => "This demo app and all its contents are licensed under the %{licence_href}. If you want to use it in ways prohibited by this license, please contact me and ask my permission."
       },
       :active_record => {
         :too_lazy => "No examples here since I'm too lazy to think of attributes to show <strong>all</strong> custom error messages. ;-)",
@@ -103,17 +103,17 @@
       },
       :index => {
         :others => "others",
-        :introduction => "Lately, a lot of work has been done by {{sven_blog}} and {{sven_github}} to facilitate future internationalization and localization of Rails.",
+        :introduction => "Lately, a lot of work has been done by %{sven_blog} and %{sven_github} to facilitate future internationalization and localization of Rails.",
         :story_so_far => "This demo app tries to show you how you can use the features that have been implemented so far to localize big parts of your Rails application."
       },
       :number_helper => {
-        :note_one => "Note: <code>number_to_phone</code> hasn't been localized yet and probably never will be - at least not in core. Look out for new internationalization/localization plugins like a new version of {{globalize}} as they will probably support stuff like that.",
+        :note_one => "Note: <code>number_to_phone</code> hasn't been localized yet and probably never will be - at least not in core. Look out for new internationalization/localization plugins like a new version of %{globalize} as they will probably support stuff like that.",
         :note_two => "Another note: <code>number_to_currency</code>, <code>number_to_percentage</code> and <code>number_to_human_size</code> all use <code>number_with_precision</code> internally and <code>number_with_precision</code> uses <code>number_with_delimiter</code> internally."
       },
       :setup => {
         :freezing_edge_and_adding => "Freezing Edge and installing the localized_dates plugin",
         :you_need_to_be_on_edge => "You need to be on Edge Rails in order to use the Rails i18n features:",
-        :date_time_formats => "For date and time formats, you also need to install the {{localized_dates_link}}:",
+        :date_time_formats => "For date and time formats, you also need to install the %{localized_dates_link}:",
         :config_locale => "Configuring the locale",
         :best_place => "The best place to put your locale configuration, in my opinion, is <code>config/locales</code>. The localized_dates plugin will copy two locales, en-US and de-AT, in this directory. You can extend or modify them and also create new locales.",
         :locale => "Here's the demo locale that was used for this demo application:",
@@ -146,12 +146,12 @@
       :footer_message => "Copyright © 2010 <a href=\"http://www.caelum.com.br\">Caelum</a>",
       :created_by     => "código criado por",
       :moderator      => "Moderador",
-      :count_topics   => {:one => "<span class=\"bignum\">1</span> discussão", :other => "<span class=\"bignum\">{{count}}</span> discussões"},
-      :count_posts    => {:one => "<span class=\"bignum\">1</span> mensagem", :other => "<span class=\"bignum\">{{count}}</span> mensagens"},
+      :count_topics   => {:one => "<span class=\"bignum\">1</span> discussão", :other => "<span class=\"bignum\">%{count}</span> discussões"},
+      :count_posts    => {:one => "<span class=\"bignum\">1</span> mensagem", :other => "<span class=\"bignum\">%{count}</span> mensagens"},
       :my_topics      => "Minhas discussões",
       :new_topic      => "Nova discussão",
-      :post_age       => "{{when}} atrás",
-      :by_user        => "por {{user}}",
+      :post_age       => "%{when} atrás",
+      :by_user        => "por %{user}",
       :view           => "ler",
       :views_forums   => {
         :unmoderated  => "Este fórum não é moderado."
@@ -180,7 +180,7 @@
       :post_topic       => "Criar discussão",
       :monitor_topic    => "Monitorar discussão",
       :monitoring_topic => "Monitorando discussão",
-      :count_voices     => {:one => "1 participante", :other => "{{count}} participantes"},
+      :count_voices     => {:one => "1 participante", :other => "%{count} participantes"},
       :voices           => "Participantes",
       :reply_to_topic   => "Responder",
       :save_changes     => "Salvar alterações",
@@ -221,7 +221,7 @@
 
       # Posts
       :recent_posts       => "Mensagens recentes",
-      :count_posts_found  => {:zero => "nenhuma mensagem", :one => "1 mensagem", :other => "{{count}} mensagens" },
+      :count_posts_found  => {:zero => "nenhuma mensagem", :one => "1 mensagem", :other => "%{count} mensagens" },
       :topic              => "Discussão",
       :forum              => "Fórum",
       :post_updated       => "Mensagem modificada com sucesso",
@@ -247,7 +247,7 @@
       # Missing on User#show
       :all => "todas",
       :monitored => "monitoradas",
-      :user_since => "cadastrado em {{date}}",
+      :user_since => "cadastrado em %{date}",
       
       :password_confirm      => "Confirmação de Senha",
       :openid_url            => "URL do OpenID (opcional)",
@@ -261,9 +261,9 @@
       :user_unsuspended      => "O usuário não está mais suspenso.",
       :user_active           => "ativo",
       :user_pending          => "pendente",
-      :count_users           => {:zero => "nenhum usuário", :one => "1 usuário", :other => "{{num}} usuários" },
-      :count_users_active    => {:zero => "nenhum usuário ativo", :one => "1 usuário ativo", :other => "{{num}} usuários ativos" },
-      :count_users_lurking   => {:zero => "nenhum usuário escondido", :one => "1 usuário escondido", :other => "{{num}} usuários escondidos" },
+      :count_users           => {:zero => "nenhum usuário", :one => "1 usuário", :other => "%{num} usuários" },
+      :count_users_active    => {:zero => "nenhum usuário ativo", :one => "1 usuário ativo", :other => "%{num} usuários ativos" },
+      :count_users_lurking   => {:zero => "nenhum usuário escondido", :one => "1 usuário escondido", :other => "%{num} usuários escondidos" },
       :login_or_signup_and_comment     => "Faça o login",
       :user_is_administrator => "Administrador",
       :select_responsability => 'Selecione a responsabilidade',
@@ -299,7 +299,7 @@
         :sig_title                 => "Assinatura",
         :update_profile            => "Salvar perfil",
         :avatars_title             => "Avatar",
-        :gravatar_notice           => "Para ter seu avatar exibido neste fórum, registre-se no {{gravatar}}.",
+        :gravatar_notice           => "Para ter seu avatar exibido neste fórum, registre-se no %{gravatar}.",
 
         :find_a_user               => "Busca de Usuários",
         :search_title              => "Procurar",

@@ -5,7 +5,7 @@
 
 <h1 id="new_topic"><%= I18n.t 'txt.new_topic', :default => 'New topic' %></h1>
 <%if logged_in?%>
-  <p class="subtitle"><%= I18n.t 'txt.by_user', :default => 'by {{user}}', :user => current_user.display_name %></p>
+  <p class="subtitle"><%= I18n.t 'txt.by_user', :default => 'by %{user}', :user => current_user.display_name %></p>
 <%end%>
 <br class="clear" />
 

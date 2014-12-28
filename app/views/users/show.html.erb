@@ -18,7 +18,7 @@
     <%unless @user.twitter.blank? -%>
       <strong><%= I18n.t 'txt.twitter', :default => 'Twitter' %></strong> <%= sanitize link_to("@" + @user.twitter, "http://twitter.com/" + @user.twitter) %><br />
     <% end -%>
-  <%= I18n.t('txt.user_since', :default => 'User since {{date}}', :date => I18n.l(@user.created_at.to_s(:long).to_date)).capitalize %>
+  <%= I18n.t('txt.user_since', :default => 'User since %{date}', :date => I18n.l(@user.created_at.to_s(:long).to_date)).capitalize %>
 </small>
 <hr style="clear:both" />
   <span class="bio"><%= @user.bio_html %></span>
